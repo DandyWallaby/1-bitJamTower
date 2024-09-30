@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://dxhbcpgid06l1"]
+
+[ext_resource type="Script" path="res://Scripts/classic_mode.gd" id="1_xh53r"]
+[ext_resource type="PackedScene" uid="uid://dpoecpuuddj2f" path="res://Scenes/player.tscn" id="2_og52k"]
+[ext_resource type="AudioStream" uid="uid://db8v3igu6eoiv" path="res://Sounds/End_Room.mp3" id="3_q0dg4"]
+
+[node name="Classic_Mode" type="Node2D"]
+script = ExtResource("1_xh53r")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -10
+offset_top = -5592.0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 1)
+
+[node name="Player" parent="." instance=ExtResource("2_og52k")]
+position = Vector2(560, 264)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2(0, -200)
+
+[node name="BlackTansition" type="ColorRect" parent="."]
+visible = false
+z_index = 101
+offset_left = -312.0
+offset_top = -424.0
+offset_right = 1560.0
+offset_bottom = 1096.0
+
+[node name="EndRoom" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_q0dg4")
+volume_db = -3.748

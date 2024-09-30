@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dkgfy1ihalmsw"]
+
+[sub_resource type="GDScript" id="GDScript_p1w4w"]
+script/source = "
+"
+
+[node name="DJ" type="AudioStreamPlayer2D"]
+script = SubResource("GDScript_p1w4w")

@@ -1,0 +1,42 @@
+[gd_scene load_steps=2 format=3 uid="uid://dvk7p3bmcfokx"]
+
+[ext_resource type="Script" path="res://Scripts/settings_menu.gd" id="1_gaq3u"]
+
+[node name="settings_menu" type="Node2D"]
+script = ExtResource("1_gaq3u")
+
+[node name="Back" type="Button" parent="."]
+offset_right = 128.0
+offset_bottom = 64.0
+text = "Back"
+
+[node name="Music_Volume" type="HSlider" parent="."]
+offset_left = 704.0
+offset_top = 96.0
+offset_right = 960.0
+offset_bottom = 128.0
+value = 100.0
+
+[node name="Sfx_Volume" type="HSlider" parent="."]
+offset_left = 704.0
+offset_top = 200.0
+offset_right = 960.0
+offset_bottom = 232.0
+value = 100.0
+
+[node name="Music Volume" type="Label" parent="."]
+offset_left = 784.0
+offset_top = 40.0
+offset_right = 893.0
+offset_bottom = 92.0
+text = "
+Music Volume"
+
+[node name="Sfx Volume" type="Label" parent="."]
+offset_left = 792.0
+offset_top = 176.0
+offset_right = 879.0
+offset_bottom = 202.0
+text = "Sfx Volume"
+
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
